@@ -1,0 +1,65 @@
+#display-tasks {
+    width: 100%;
+    padding: 0 2rem;
+    border: #d3cbcb solid 4px;
+}
+.task, .task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.task h3, .task-row div {
+    margin: 0;
+    text-align: left;
+}
+
+.title {
+    flex: 1;
+}
+
+.description {
+    flex: 2;
+}
+
+.due-date {
+    flex: 1;
+}
+
+.due-date-container {
+    display: flex;
+    flex: 1;
+}
+.priority {
+    flex: 1;
+}
+
+.project {
+    flex: 1;
+}
+
+.task-row {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+.task h3 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.task-row div {
+    font-size: 16px;
+}
+
+.delete {
+    flex: 0 0 30px;
+    text-align: center;
+}
+
+.delete-task:hover {
+    background-color: #ddd;
+}
+
