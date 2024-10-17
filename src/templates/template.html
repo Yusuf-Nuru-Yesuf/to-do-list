@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <section>
+        <div id="nav">
+            <div id="action-buttons">
+                <button id="add-task"><span>+</span> Add task</button>
+                <button id="all-tasks">All Tasks</button>
+            </div>
+
+            <div id="projects">
+                <h2>Projects</h2>
+                <button id="add-project"><span>+</span> Add Project</button>
+            </div>
+        </div>
+
+        <div id="display-tasks">
+
+        </div>
+    </section>
+    <dialog class="add-task-dialog" >
+        <form class="form-container" id="task-form">
+
+            <h2>Create a New Task</h2>
+
+            <!-- Title Input -->
+            <div class="form-input">
+                <label for="task-title">Title</label>
+                <input type="text" id="task-title" placeholder="Task title" required>
+            </div>
+
+            <!-- Description Input -->
+            <div class="form-input">
+                <label for="task-description">Description</label>
+                <textarea id="task-description" rows="2" placeholder="Task description" maxlength="80"></textarea>
+            </div>
+
+            <!-- Due Date Input -->
+            <div class="form-input">
+                <label for="task-due-date">Due Date</label>
+                <input type="date" id="task-due-date" required min="${new Date()}">
+            </div>
+
+            <!-- Priority Input -->
+            <div class="form-input">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Project Name Input -->
+            <div class="form-input">
+                <label for="project-select">Project Name</label>
+                <select id="project-select" required>
+                </select>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn">
+                <button type="submit" id="submit-task-form">Create Task</button>
+                <button type="button" id="close-task-form">Close</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <dialog class="add-project-dialog">
+        <form id="project-form">
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" required>
+            <button type="submit" id="submit-project-form">Add Project</button>
+            <button type="button" id="close-project-form">Cancel</button>
+        </form>
+    </dialog>
+</body>
+</html>
